@@ -1,0 +1,15 @@
+name: Build com .NET e Agendamento
+
+on:
+  push:
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: rodar script personalizado
+        run: echo "rodando meu script .NET"
